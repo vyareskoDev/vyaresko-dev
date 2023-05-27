@@ -13,6 +13,21 @@ body, html, *, *::before, *::after {
 }
 
 body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.dark {
+    height: 100dvh;
+    background: radial-gradient(36.21% 85.02% at 100% 100%, rgba(77, 61, 99, 0.2) 0%, rgba(4, 4, 5, 0) 100%),
+    radial-gradient(23.16% 37.86% at 5.07% 3.93%, rgba(118, 166, 210, 0.2) 0%, rgba(58, 65, 80, 0) 100%, rgba(58, 65, 80, 0) 100%,
+    rgba(58, 65, 80, 0) 100%), #1A1E1F;
+    background-repeat: no-repeat;
+}
+
+.light {
     height: 100dvh;
     background: radial-gradient(45.14% 67.92% at 100% 60.52%, rgba(194, 149, 233, 0.6) 0.01%,
     rgba(208, 192, 222, 0) 100%, rgba(208, 192, 222, 0) 100%),
@@ -35,9 +50,49 @@ h1, h2, h3, h4, h5, h6, p, a, span, textarea {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 950px) {
     
+}
+
+.btn {
+    height: 30px;
+    padding: 0 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+
+.dark .filled {
+    outline: none;
+    border: none;
+    background-color: var(--secondary-white-text-color);
+    color: var(--main-text-color);
+}
+
+.light .filled {
+    outline: none;
+    border: none;
+    background-color: var(--secondary-text-color);
+    color: var(--white-text-color);
+}
+
+.dark .transparent {
+    outline: none;
+    background-color: transparent;
+    border: .8px solid var(--white-text-color);
+    color: var(--white-text-color);
+}
+
+.light .transparent {
+    outline: none;
+    background-color: transparent;
+    border: .8px solid var(--main-text-color);
+    color: var(--main-text-color);
 }

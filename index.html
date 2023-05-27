@@ -8,8 +8,7 @@
     <meta name="description" content="The simpler, the better. The portfolio website of professional fullstack web developer and designer.">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
-<body>
-    <script type="text/javascript" src="./script.js" defer></script>
+<body class="light">
     <header>
         <div class="header__container">
             <img src="./icons/logo.png"></img>
@@ -22,25 +21,31 @@
                 <a href="./projects/index.html">/projects</a>
                 <a href="./drafts/index.html">/drafts</a>
                 <a href="./drafts/index.html">/contacts</a>
-                <img src="./icons/sun.svg"></svg>
+                <div>
+                    <div id="change-theme" data-icon="sun"><img src="./icons/sun.svg"></svg></div>
+                </div>
+
             </nav>
             <img class="hamburger hidden" id="hamburger" src="icons/white-theme-burger.svg" />
         </div>
     </header>
-    <section class="hamburger-menu hidden" id="hamburger-menu" data-state="default">
+    <section class="hamburger-menu hidden" id="hamburger-menu" data-theme-style="light" data-state="default">
         <nav>
             <a href="./index.html" class="nav__active">/home</a>
             <a href="./about-me/index.html">/about</a>
             <a href="./projects/index.html">/projects</a>
             <a href="./drafts/index.html">/drafts</a>
             <a href="./drafts/index.html">/contacts</a>
-            <img src="./icons/sun.svg"></svg>
+
+            <div class="change-theme" data-icon="sun"><img src="./icons/sun.svg"></svg></div>
         </nav>
     </section>
     <main>
         <div class="body__headings">
-            <span class="headings__main-heading">Reactive web development 🚀</span>
-            <span class="headings__secondary-heading">Just done the right way.</span>
+            <div class="headings__labels">
+                <span class="headings__main-heading">Reactive web development 🚀</span>
+                <span class="headings__secondary-heading">Just done the right way.</span>
+            </div>
             <button class="btn filled">See my projects</button>
         </div>
         <div class="body__cards">
@@ -55,14 +60,14 @@
                         Even though I’m just starting out, I’m very creative, passionate and interested
                         in creating robust, modern and innovative projects for businesses of any scale
                     </div>
-                    <button class="btn transparent">About me</button>
                 </div>
+                <button class="btn transparent">About me</button>
             </article>
 
             <article class="cards__card">
                 <div class="card__header">
                     <img class="card__icon" href="./icons/cardIcons/graph.svg"></svg>
-                    <span class="card__heading">Complex app</span>
+                    <span class="card__heading">Complex apps</span>
                 </div>
                 <div class="card__body">
                     <div class="card__body--description">
@@ -73,8 +78,8 @@
                         and business solutions, using the most modern,
                         safe and robust technologies.
                     </div>
-                    <button class="btn transparent">About me</button>
                 </div>
+                <button class="btn transparent">About me</button>
             </article>
 
             <article class="cards__card">
@@ -90,8 +95,8 @@
                         in creating clean, modern designs, for which your
                         business or product will be recognized
                     </div>
-                    <button class="btn transparent">About me</button>
                 </div>
+                <button class="btn transparent">About me</button>
             </article>
         </div>
     </main>
@@ -106,5 +111,6 @@
             <img src="./icons/mail.svg"></svg>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

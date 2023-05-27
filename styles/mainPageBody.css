@@ -1,31 +1,96 @@
 main {
+    width: 100%;
+    height: 100%;
+    margin-top: 8vh;
     padding: 0 20vw;
 }
 
-.hamburger-menu {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
+.dark .body__headings {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white-text-color);
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hamburger-menu nav {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 8vh;
-    font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
 }
 
-.hamburger-menu nav img {
-    width: 2rem;
-    height: 2rem;
+.light .body__headings {
+    font-family: 'Raleway', sans-serif;
+    color: var(--main-text-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.dark .headings__labels {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white-text-color);
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.light .headings__labels {
+    font-family: 'Raleway', sans-serif;
+    color: var(--main-text-color);
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.headings__main-heading {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.headings__secondary-heading {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.body__cards {
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1vh;
+}
+
+.cards__card {
+    font-family: 'Open Sans', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 17px;
+    border-radius: 10px;
+}
+
+.card__header {
+    width: 100%;
+    flex-direction: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.cards__card .btn {
+    width: 100%;
+}
+
+.light .cards__card {
+    background-color: var(--main-container-color);
+}
+
 
 @media (max-width: 1400px) {
     main {
