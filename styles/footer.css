@@ -1,5 +1,9 @@
+main {
+    margin-bottom: 10vh;
+}
 footer {
     padding: 0 20vw;
     position: absolute;
     bottom: 0;
+    z-index: -1;
 }

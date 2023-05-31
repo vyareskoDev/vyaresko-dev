@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("/fonts/OpenSansLight.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("/fonts/OpenSansRegular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans Semi Bold";
+    src: url("/fonts/OpenSansSemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Raleway Medium";
+    src: url("/fonts/RalewayMedium.ttf");
+}
+
+@font-face {
+    font-family: "Raleway Regular";
+    src: url("/fonts/RalewayRegular.ttf");
+}

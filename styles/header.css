@@ -6,6 +6,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 20vw;
+    z-index: 100;
 }
 
 .light header {
@@ -118,25 +119,20 @@ header nav a {
     max-width: 25px;
 }
 
-
-.light .hamburger-menu {
+.hamburger-menu {
     position: absolute;
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
+}
+
+.light .hamburger-menu {
     color: var(--main-text-color);
 }
 
 .dark .hamburger-menu {
-    z-index: 10000;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
     color: var(--white-text-color);
 }
 

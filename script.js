@@ -3,6 +3,9 @@ const hamburgerMenu = document.querySelector("#hamburger-menu");
 const changeThemeMenuButton = document.querySelector(".change-theme");
 const headerNav = document.querySelector("header nav");
 const changeThemeButton = document.querySelector("#change-theme");
+const codeIcon = document.querySelector("#code-icon");
+const graphIcon = document.querySelector("#graph-icon");
+const fillIcon = document.querySelector("#fill-icon");
 
 
 window.addEventListener("load", () => { 
@@ -39,6 +42,11 @@ function setDarkTheme() {
     const image2 = changeThemeMenuButton.children[0];
 
     hamburger.src = "/icons/dark-theme-burger.svg";
+    codeIcon.src = "/icons/cardIcons/dark-code.svg";
+    graphIcon.src = "/icons/cardIcons/dark-graph.svg";
+    fillIcon.src = "/icons/cardIcons/dark-fill.svg";
+
+
     document.body.classList.add("dark");
     document.body.classList.remove("light");
     localStorage.setItem("theme", "dark");
@@ -52,7 +60,12 @@ function setDarkTheme() {
 function setLightTheme() {
     const image = changeThemeButton.children[0];
     const image2 = changeThemeMenuButton.children[0];
+
     hamburger.src = "/icons/white-theme-burger.svg";
+    codeIcon.src = "/icons/cardIcons/light-code.svg";
+    graphIcon.src = "/icons/cardIcons/light-graph.svg";
+    fillIcon.src = "/icons/cardIcons/light-fill.svg";
+
     document.body.classList.add("light");
     document.body.classList.remove("dark");
     localStorage.setItem("theme", "light");
