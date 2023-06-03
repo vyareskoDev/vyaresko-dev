@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vYaresko | веб-розробка & веб-дизайн</title>
+    <meta name="description" content="Чим простіше, тим ліпше. Портфоліо професійного фулстак веб розробника та дизайнера.">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+<body class="light">
+    <header>
+        <div class="header__container">
+            <img src="./icons/logo.png"></img>
+            <span class="header__heading"><a href="index.html">vYaresko</a></span>
+        </div>
+        <div class="header__container">
+            <nav>
+                <a href="./index.html" class="nav__active">/home</a>
+                <a href="./about-me/index.html">/about</a>
+                <a href="./projects/index.html">/projects</a>
+                <a href="./drafts/index.html">/drafts</a>
+                <a href="./drafts/index.html">/contacts</a>
+                <a href="en.html">[UA]</a>
+                <div>
+                    <div id="change-theme"></div>
+                </div>
+
+            </nav>
+            <div class="hamburger hidden" data-state="closed" id="hamburger"></div>
+        </div>
+    </header>
+    <section class="hamburger-menu hidden" id="hamburger-menu" data-theme-style="light" data-state="default">
+        <nav>
+            <a href="./index.html" class="nav__active">/home</a>
+            <a href="./about-me/index.html">/about</a>
+            <a href="./projects/index.html">/projects</a>
+            <a href="./drafts/index.html">/drafts</a>
+            <a href="./drafts/index.html">/contacts</a>
+            <a href="en.html">[UA]</a>
+
+            <div id="change-theme-alt"></div>
+        </nav>
+    </section>
+    <main>
+        <div class="main__content">
+            <div class="body__headings">
+                <div class="headings__labels">
+                    <span class="headings__main-heading">Реактивна веб-розробка 🚀</span>
+                    <span class="headings__secondary-heading">Виконана правильно.</span>
+                </div>
+                <button class="btn filled">Подивитися мої проєкти</button>
+            </div>
+            <div class="body__cards">
+                <article class="cards__card">
+                    <div class="card__header">
+                        <div class="card__icon" id="code-icon"></div>
+                        <span class="card__heading">Лендінг-сторінки</span>
+                    </div>
+                    <div class="card__body">
+                            Якщо ви володієте бізнесом, то вам точно знадобиться професійний вебсайт. 
+                            Я можу якісно та ефективно виконати цю задачу за короткий строк, тому що я
+                            ставлюся до своєї роботи креативно, з любов'ю, та по-запальному, та бажаю створювати якомога
+                            більш надійні, сучасні та інноваційні продукти для підприємств будь якого масштабу.
+                    </div>
+                    <button class="btn transparent">Про мене</button>
+                </article>
+    
+                <article class="cards__card">
+                    <div class="card__header">
+                        <div class="card__icon" id="graph-icon"></div>
+                        <span class="card__heading">Складні програми</span>
+                    </div>
+                    <div class="card__body">
+                            Якщо ви потребуєте досвідченого Реакт розробника
+                            для свого стартапу, чи компанії, то ви знайдете 
+                            мене як чудового кандидата на цю роботу.
+                            Я здатен вирішувати складні проблеми у кодуванні, 
+                            та створювати комплексні рішення для бізнесу, 
+                            використовуючи найсучасніші, найбезпечніші, та найнадійніші.
+                    </div>
+                    <button class="btn transparent">Про мене</button>
+                </article>
+    
+                <article class="cards__card">
+                    <div class="card__header">
+                        <div class="card__icon" id="fill-icon"></div>
+                        <span class="card__heading">Дизайни</span>
+                    </div>
+                    <div class="card__body">
+                            Якщо ви власник бізнесу чи стартапу, то вашому сайту
+                            точно знадобиться дизайн, що буде
+                            сучасним та зручним для ваших користувачів.
+                            Я маю великий досвід у створенні чистих, сучасних дизайнів, 
+                            завдяки яким ваш бізнес чи продукт дістане визнання на ринку.
+                    </div>
+                    <button class="btn transparent">Про мене</button>
+                </article>
+        </div>
+        </div>
+        <footer>
+            <img class="logo" src="./icons/logo.png"></svg>
+            <span class="footer__heading">vYaresko</span>
+            <span class="footer__secondary-text">Чим простіше, тим ліпше.</span>
+            <div class="footer__links">
+                <a id="github-icon"></a>
+                <a id="telegram-icon"></a>
+                <a id="instagram-icon"></a>
+                <a id="mail-icon"></a>
+            </div>
+        </footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -19,11 +19,7 @@ window.addEventListener("load", () => {
     }
 
     if(document.body.clientWidth <= 1000) {
-        console.log("Hiii!")
         headerNav.classList.add('hidden');
-        console.log(headerNav.classList);
-        hamburger.classList.remove('hidden');
-        console.log(hamburger.classList)
     }
 })
 
@@ -69,7 +65,7 @@ hamburger.addEventListener("click", () => {
     }else {
         hamburger.dataset.state = "open"
     }
-    
+
     hamburgerMenu.classList.toggle("hidden");
 });
 

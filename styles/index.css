@@ -71,6 +71,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, textarea {
     font-size: 12px;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
 
 .dark .filled {
     outline: none;
