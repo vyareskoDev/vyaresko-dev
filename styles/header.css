@@ -7,6 +7,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 20vw;
+    z-index: 3;
 }
 
 .light header {
@@ -116,8 +117,31 @@ header nav img:hover {
 }
 
 #hamburger {
-    max-height: 25px;
-    max-width: 25px;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-clip: border-box;
+    min-height: 15px;
+    min-width: 24px;
+}
+
+.light #hamburger[data-state="closed"] {
+    background-image: url("/icons/white-theme-burger.svg");
+}
+
+.dark #hamburger[data-state="closed"] {
+    background-image: url("/icons/dark-theme-burger.svg");
+}
+
+.light #hamburger[data-state="open"] {
+    width: 25px;
+    height: 25px;
+    background-image: url("/icons/white-theme-close-burger.svg");
+}
+
+.dark #hamburger[data-state="open"] {
+    width: 25px;
+    height: 25px;
+    background-image: url("/icons/dark-theme-close-burger.svg");
 }
 
 .hamburger-menu {
@@ -149,22 +173,22 @@ header nav img:hover {
     padding-bottom: 8vh;
 }
 
-#change-theme {
+#change-theme, #change-theme-alt {
     height: 20px;
     width: 20px;
 }
 
-#change-theme:hover {
+#change-theme:hover, #change-theme-alt:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: all .2s ease-in-out;
 }
 
-.light #change-theme {
+.light #change-theme, .light #change-theme-alt  {
     background-image: url("/icons/sun.svg");
 }
 
-.dark #change-theme {
+.dark #change-theme, .dark #change-theme-alt {
     background-image: url("/icons/moon.svg");
 }
 

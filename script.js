@@ -1,6 +1,6 @@
 const hamburger = document.querySelector("#hamburger");
 const hamburgerMenu = document.querySelector("#hamburger-menu");
-const changeThemeMenuButton = document.querySelector(".change-theme");
+const changeThemeButtonAlt = document.querySelector("#change-theme-alt");
 const headerNav = document.querySelector("header nav");
 const changeThemeButton = document.querySelector("#change-theme");
 const header = document.querySelector("header");
@@ -21,7 +21,9 @@ window.addEventListener("load", () => {
     if(document.body.clientWidth <= 1000) {
         console.log("Hiii!")
         headerNav.classList.add('hidden');
+        console.log(headerNav.classList);
         hamburger.classList.remove('hidden');
+        console.log(hamburger.classList)
     }
 })
 
@@ -33,7 +35,8 @@ changeThemeButton.addEventListener("click", () => {
     }
 }, false);
 
-changeThemeMenuButton.addEventListener("click", () => {
+changeThemeButtonAlt.addEventListener("click", () => {
+    hamburger.dataset.state = "open";
     if(document.body.classList.contains("light")) {
         setDarkTheme();
     }else {
@@ -60,23 +63,13 @@ function setLightTheme() {
 }
 
 hamburger.addEventListener("click", () => {
-    if(hamburger.dataset.state !== "default") {
-        if(document.body.classList.contains("light")) {
-            hamburger.src = "./icons/white-theme-close-burger.svg";
-        }else {
-            hamburger.src = "./icons/dark-theme-close-burger.svg";
-        }
-        
-        hamburger.dataset.state = "default";
+    
+    if(hamburger.dataset.state === "open") {
+        hamburger.dataset.state = "closed";
     }else {
-        if(document.body.classList.contains("light")) {
-            hamburger.src = "./icons/white-theme-burger.svg";
-        }else {
-            hamburger.src = "./icons/dark-theme-burger.svg"
-        }
-        
-        hamburger.dataset.state = "opened";
+        hamburger.dataset.state = "open"
     }
+    
     hamburgerMenu.classList.toggle("hidden");
 });
 
@@ -97,5 +90,13 @@ window.addEventListener("resize", () => {
                 }
             }
         }
+    }
+})
+
+document.addEventListener("keydown", (e) => {
+    console.log(e.code)
+    if((e.key == "Escape" || e.code == "Escape") && !hamburgerMenu.classList.contains("hidden")) {
+        hamburger.classList.remove("hidden")
+        hamburgerMenu.classList.add("hidden")
     }
 })
