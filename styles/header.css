@@ -1,12 +1,12 @@
 header {
+    position: static;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
-    height: 48px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20vw;
-    z-index: 100;
 }
 
 .light header {
@@ -64,35 +64,34 @@ header nav a {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border-radius: 10px;
+    height: 100%;
     transition: all .15s ease-in;
 }
 
-.light header nav img {
+header nav img {
     padding: 10px;
-    border-radius: 10px;
+}
+
+.light header nav img {
     color: var(--inactive-main-text-color)
 }
 
 .dark header nav img {
-    padding: 10px;
-    border-radius: 10px;
     color: var(--inactive-white-text-color)
 }
 
+header nav img:hover {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
 
 .light header nav img:hover {
-    background-color: var(--secondary-white-text-color);
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+    background-color: var(--inactive-main-text-color);
 }
 
 .dark header nav img:hover {
     background-color: var(--inactive-white-text-color);
-    cursor: pointer;
-    transition: all .2s ease-in-out;
 }
-
 
 .light header nav a:hover {
     background-color: var(--inactive-main-text-color);
@@ -104,14 +103,16 @@ header nav a {
     color: var(--main-text-color);
 }
 
+.nav__active {
+    font-weight: 500;
+}
+
 .light .nav__active {
     color: var(--main-text-color);
-    font-weight: 500;
 }
 
 .dark .nav__active {
     color: var(--white-text-color);
-    font-weight: 500;
 }
 
 #hamburger {
@@ -161,19 +162,21 @@ header nav a {
     justify-content: center;
 }
 
-
-
-
-
-
-@media (max-width: 1400px) {
+@media (max-width: 1459px) {
     header {
-        padding: 0 10vw;
+        padding: 0 15vw;
     }
 }
 
+
 @media (max-width: 1000px) {
     header {
-        padding: 0 5vw;
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 510px) {
+    header {
+        padding: 0 10vw;
     }
 }
