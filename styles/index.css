@@ -7,11 +7,18 @@
 
 
 
-body, html, *, *::before, *::after {
+body, html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 
 body {
     display: flex;
@@ -93,17 +100,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, textarea {
     color: var(--main-text-color);
 }
 
-@media (min-width: 1168px) {
-    html {
-        height: 100dvh;
-    }
-
-    body {
-        height: 100%;
-        min-height: 100%;
-        max-height: 100%;
-    }    
-}
 
 @media (max-width: 1000px) {
     .btn {

@@ -30,6 +30,7 @@ footer .logo {
     font-family: "Open Sans Light", sans-serif;
     color: var(--tertiary-text-color);
     font-size: 13px;
+    text-align: center;
 }
 
 .footer__links {

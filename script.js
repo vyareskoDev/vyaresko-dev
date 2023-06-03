@@ -5,6 +5,7 @@ const headerNav = document.querySelector("header nav");
 const changeThemeButton = document.querySelector("#change-theme");
 const header = document.querySelector("header");
 const headings = document.querySelector(".body__headings");
+const cards = document.querySelector(".body__cards")
 
 window.addEventListener("load", () => { 
     let currentValue = localStorage.getItem("theme");
@@ -15,6 +16,12 @@ window.addEventListener("load", () => {
         setDarkTheme();
     }else {
         setLightTheme();
+    }
+
+    if(document.body.clientWidth <= 1000) {
+        console.log("Hiii!")
+        headerNav.classList.add('hidden');
+        hamburger.classList.remove('hidden');
     }
 })
 
