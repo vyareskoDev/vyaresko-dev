@@ -34,6 +34,30 @@ main {
 
 }
 
+.light #code-icon {
+    background-image: url("/icons/cardIcons/light-code.svg");
+}
+
+.dark #code-icon {
+    background-image: url("/icons/cardIcons/dark-code.svg");
+}
+
+.light #graph-icon {
+    background-image: url("/icons/cardIcons/light-graph.svg");
+}
+
+.dark #graph-icon {
+    background-image: url("/icons/cardIcons/dark-graph.svg");
+}
+
+.light #fill-icon {
+    background-image: url("/icons/cardIcons/light-fill.svg");
+}
+
+.dark #fill-icon {
+    background-image: url("/icons/cardIcons/dark-fill.svg");
+}
+
 .headings__labels {
     flex-direction: column;
     display: flex;
@@ -120,6 +144,8 @@ main {
     height: 25px;
     width: 25px;
     vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 1800px) {

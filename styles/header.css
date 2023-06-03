@@ -149,7 +149,24 @@ header nav img:hover {
     padding-bottom: 8vh;
 }
 
+#change-theme {
+    height: 20px;
+    width: 20px;
+}
 
+#change-theme:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+}
+
+.light #change-theme {
+    background-image: url("/icons/sun.svg");
+}
+
+.dark #change-theme {
+    background-image: url("/icons/moon.svg");
+}
 
 .hamburger-menu nav img {
     width: 2rem;
