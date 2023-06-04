@@ -15,12 +15,14 @@ header {
     rgba(255, 255, 255, 0.5) 17.36%, rgba(255, 255, 255, 0.5) 82.64%,
     rgba(255, 255, 255, 0.3) 100%);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: var(--main-text-color);
 }
 
 .dark header {
     background: linear-gradient(90deg, rgba(170, 170, 170, 0.3) 0%, rgba(83, 83, 83, 0.5) 17.36%, rgba(89, 89, 89, 0.5) 82.64%, rgba(95, 95, 95, 0.3) 100%);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
     color: var(--white-text-color);
 }
@@ -150,6 +152,7 @@ header nav img:hover {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
 }
