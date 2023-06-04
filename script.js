@@ -18,9 +18,6 @@ window.addEventListener("load", () => {
         setLightTheme();
     }
 
-    if(document.body.clientWidth <= 1000) {
-        headerNav.classList.add('hidden');
-    }
 })
 
 changeThemeButton.addEventListener("click", () => {
@@ -69,25 +66,6 @@ hamburger.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("hidden");
 });
 
-window.addEventListener("resize", () => {
-    if(document.body.clientWidth <= 1000) {
-        headerNav.classList.add('hidden');
-        hamburger.classList.remove('hidden');
-    }else {
-        if(headerNav.classList.contains('hidden')) {
-            headerNav.classList.remove('hidden');
-            hamburger.classList.add('hidden');
-            if(!hamburgerMenu.classList.contains("hidden")) {
-                hamburgerMenu.classList.add("hidden");
-                if(document.body.classList.contains("light")) {
-                    hamburger.src = "./icons/white-theme-burger.svg";
-                }else {
-                    hamburger.src = "./icons/dark-theme-burger.svg"
-                }
-            }
-        }
-    }
-})
 
 document.addEventListener("keydown", (e) => {
     console.log(e.code)

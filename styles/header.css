@@ -117,6 +117,7 @@ header nav img:hover {
 }
 
 #hamburger {
+    display: none;
     background-repeat: no-repeat !important;
     background-size: cover;
     background-clip: border-box;
@@ -170,7 +171,6 @@ header nav img:hover {
     gap: 5vh;
     font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
-    padding-bottom: 8vh;
 }
 
 #change-theme, #change-theme-alt {
@@ -192,11 +192,6 @@ header nav img:hover {
     background-image: url("/icons/moon.svg");
 }
 
-.hamburger-menu nav img {
-    width: 2rem;
-    height: 2rem;
-}
-
 #change-theme {
     display: flex;
     align-items: center;
@@ -208,7 +203,15 @@ header nav img:hover {
         padding: 0 15vw;
     }
 }
+@media (max-width: 1168px) {
+    #hamburger {
+        display: flex;
+    }
 
+    header nav {
+        display: none !important;
+    }
+}
 
 @media (max-width: 1000px) {
     header {
@@ -219,5 +222,19 @@ header nav img:hover {
 @media (max-width: 510px) {
     header {
         padding: 0 10vw;
+    }
+}
+
+
+@media (max-height: 700px) {
+    .hamburger-menu nav {
+        padding-top: 50px;
+    }
+}
+
+@media (max-height: 340px) {
+    .hamburger-menu nav {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
