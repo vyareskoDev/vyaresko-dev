@@ -9,16 +9,16 @@ const cards = document.querySelector(".body__cards");
 const menuChangeLanguage = document.querySelector("#hamburger-menu__change-language");
 
 window.addEventListener("load", () => { 
-    let currentTheme = localStorage.getItem("theme");
-    let isMenuOpen = localStorage.getItem("isMenuOpen");
+    const preferencedThemeMatch = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    const isMenuOpen = localStorage.getItem("isMenuOpen");
 
     if(!currentTheme) return;
-    if(isMenuOpen) {
+    if(isMenuOpen && document.body.clientWidth <= 1168) {
         showMenu();
     }
 
-    document.body.classList.add(currentTheme);
-    if(currentTheme === "dark") {
+    if(currentTheme === "dark" || preferencedThemeMatch.matches) {
         setDarkTheme();
     }else {
         setLightTheme();
