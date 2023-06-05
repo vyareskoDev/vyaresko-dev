@@ -93,17 +93,17 @@ main {
 .body__cards {
     transition: all .1s ease-in-out;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     width: 100%;
-    gap: 1vh;
+    height: 100%;
+    gap: .5vh;
 }
 
 .cards__card {
+    flex: 1;
     transition: all .1s ease-in-out;
     font-family: 'Open Sans Light', sans-serif;
-    height: 250px;
-    max-height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -162,6 +162,13 @@ main {
 @media (max-width: 1459px) {
     main {
         padding: 5vh 15vw;
+    }
+}
+
+
+@media (max-width: 1260px) {
+    .btn .transparent {
+        font-size: 10px;
     }
 }
 

@@ -89,7 +89,6 @@ function showMenu() {
     hamburger.dataset.state = "open"
     hamburgerMenu.classList.remove("hidden");
     document.body.style.overflow = "hidden";
-    localStorage.setItem("isMenuOpen", true);
 }
 
 function hideMenu() {
@@ -105,13 +104,11 @@ function toggleMenu() {
     if(hamburgerMenu.classList.contains("hidden")) {
         hamburger.dataset.state = "closed";
         document.body.style.overflow = "scroll";
-        localStorage.setItem("isMenuOpen", false);
         return;
     }
 
     hamburger.dataset.state = "open";
     document.body.style.overflow = "hidden";
-    localStorage.setItem("isMenuOpen", true);
 }
 
 function isMenuVisible()
